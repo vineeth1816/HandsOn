@@ -1,12 +1,9 @@
 $(document).ready(function(){
 	var c=0;
-	alert("hell");
 	$('#attach').click(function(){
 		if(c%2==0)
 		{
 			$holder=$('.d').detach();
-			
-		
 		}
 		else
 			$('p').append($holder);
