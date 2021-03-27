@@ -5,6 +5,7 @@ $(document).ready(function(){
 		if(s.includes("th")){
 			$(this).css('font-style','italic');
 			$(this).css('text-shadow','2px 2px pink')
+			$(this).css('font-weight','bold');
 		}
 	})
 	$('span').mouseout(function(){
