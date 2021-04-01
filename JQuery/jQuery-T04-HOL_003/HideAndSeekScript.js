@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	var c=0;
+	
 	$('#attach').click(function(){
 		if(c%2==0)
 		{
