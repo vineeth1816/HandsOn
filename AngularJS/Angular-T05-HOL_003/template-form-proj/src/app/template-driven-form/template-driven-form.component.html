@@ -1,0 +1,136 @@
+<div class="row">
+
+    <div class="col-md-4 col-md-offset-4" style="margin-top: 50px; border: 1px solid rgb(100, 98, 98); padding: 30px;">
+    
+    <form #loginForm="ngForm" class="form-horizontal" role="form">
+    
+    <fieldset>
+    
+    <legend>Address Details:
+    
+    <strong>Template Driven Form</strong>
+    
+    </legend>
+    
+    <div class="form-group">
+    
+    <label class="col-sm-2 control-label" for="textinput">Address</label>
+    
+    <div class="col-sm-10">
+    
+        <input type="text" [(ngModel)]="model.address" [ngClass]="{'invalid-data': address.invalid && loginForm.submitted, 'valid-data': address.valid && loginForm.submitted}" required name="address" #address="ngModel" placeholder="Enter Address" class="form-control">
+
+        <div *ngIf="address.invalid && loginForm.submitted">
+        
+        <span style="color: red;">Please Enter Address.</span>
+        
+        </div>
+    </div>
+    
+    </div>
+    
+    <div class="form-group">
+    
+    <label class="col-sm-2 control-label" for="textinput">City</label>
+    
+    <div class="col-sm-10">
+    
+    <input type="text" name="city" ngModel placeholder="Enter City Name" class="form-control" #city="ngModel" required>
+    <small class="text-danger" *ngIf="city.invalid && city.touched">City is mandatory</small>
+    </div>
+    
+    </div>
+    
+    <div class="form-group">
+    
+    <label class="col-sm-2 control-label" for="textinput">State</label>
+    
+    <div class="col-sm-4">
+    
+    <input type="text" name="state" ngModel placeholder="State" class="form-control">
+    
+    </div>
+    
+    <label class="col-sm-2 control-label"  for="textinput">Postcode</label>
+    
+    <div class="col-sm-4">
+    
+    <input type="text" name="postcode" ngModel placeholder="Enter Post Code" class="form-control">
+    
+    </div>
+    
+    </div>
+    
+    <div class="form-group">
+    
+    <label class="col-sm-2 control-label" for="textinput">Country</label>
+    
+    <div class="col-sm-10">
+
+        <select class="form-control" name="country" [(ngModel)]="model.country" #country="ngModel" [ngClass]="{'invalid-data': country.invalid && loginForm.submitted, 'valid-data': country.valid && loginForm.submitted}" required>
+        
+        <option [ngValue]="null">---Select---</option>
+        
+        <option *ngFor="let item of countryData" [value]="item">
+        
+        {{item}}
+        
+        </option>
+        
+        </select>
+        
+        <div *ngIf="country.invalid && loginForm.submitted">
+        
+        <span style="color: red;">Please Select Country.</span>
+        
+        </div>
+        
+        </div>
+    
+    </div>
+    
+    <div class="form-group">
+
+        <div class="col-sm-2 form-check"> <input type="checkbox" [(ngModel)]="model.aggrement" [ngClass]="{'invalid-data': aggrement.invalid && loginForm.submitted, 'valid-data': aggrement.valid && loginForm.submitted}" required name="aggrement" #aggrement="ngModel" class="form-check-input">
+        
+        </div>
+        
+        <label class="col-sm-10 form-check-label">I aggree to Terms & Conditions
+        
+        </label>
+        
+        </div>
+    
+    <div class="form-group">
+    
+    <div class="col-sm-12">
+    
+    <span style="color: red;">Please Agree with Terms & Conditions.</span>
+    
+    </div>
+    
+    </div>
+    
+    <div class="form-group">
+    
+    <div class="col-sm-offset-2 col-sm-10">
+    
+    <div class="pull-right">
+    
+    <button type="submit" class="btn btn-primary" style="margin: 4px;">Save</button>
+    
+    <button type="reset" class="btn btn-default">Reset</button>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </fieldset>
+    
+    </form>
+    
+    </div>
+    
+    </div>
