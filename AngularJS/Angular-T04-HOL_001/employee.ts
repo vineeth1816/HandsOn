@@ -1,5 +1,5 @@
 import { department } from "./department";
-import { skill } from "./skill";
+
 
 export interface employee{
     id:number;

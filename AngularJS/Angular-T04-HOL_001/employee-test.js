@@ -1,5 +1,6 @@
 "use strict";
 exports.__esModule = true;
+exports.employeeTest = void 0;
 var employeeTest = /** @class */ (function () {
     function employeeTest() {
         this.id = 1;
@@ -11,6 +12,10 @@ var employeeTest = /** @class */ (function () {
             department_name: "Payroll"
         };
     }
+    employeeTest.prototype.ngOnInit = function () {
+        console.log(this.id);
+    };
     return employeeTest;
 }());
-console.log(new employeeTest());
+exports.employeeTest = employeeTest;
+console.log("hell1111");

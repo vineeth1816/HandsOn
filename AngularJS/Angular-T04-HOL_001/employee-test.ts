@@ -1,6 +1,6 @@
 import { department } from "./department";
 import { employee } from "./employee";
-import { skill } from "./skill";
+
 
 export class employeeTest implements employee{
 
@@ -14,7 +14,6 @@ export class employeeTest implements employee{
     }
     constructor(){}
     
-    
-
 }
-console.log("hello");
+console.log("hell1111");
+
